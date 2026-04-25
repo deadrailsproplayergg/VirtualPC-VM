@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.vectras.vm'
+    namespace 'com.kirill.vm'
     compileSdk = 37
 
     defaultConfig {
-        applicationId "com.vectras.vm"
+        applicationId "com.kirill.vm"
         minSdk minApi
         targetSdk targetApi
         versionCode 104
