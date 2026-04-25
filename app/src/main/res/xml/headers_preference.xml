@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference
+        android:fragment="com.vectras.qemu.MainSettingsManager$AppPreferencesFragment"
+        android:key="app"
+        android:summary="@string/system_settings_description"
+        android:title="@string/system"
+        app:iconSpaceReserved="false" />
+    <Preference
+        android:key="userinterface"
+        android:title="@string/theme"
+        android:summary="@string/personalization_settings_description"
+        app:iconSpaceReserved="false" />
+
+    <Preference
+        android:key="qemu"
+        android:fragment="com.vectras.qemu.MainSettingsManager$QemuPreferencesFragment"
+        android:title="@string/qemu"
+        android:summary="@string/qemu_settings_description"
+        app:iconSpaceReserved="false" />
+    <Preference
+        android:key="vnc"
+        android:title="@string/vnc"
+        android:summary="@string/settings_for_vnc"
+        app:iconSpaceReserved="false">
+        <intent
+            android:targetPackage="com.vectras.vm"
+            android:targetClass="com.vectras.vm.settings.VNCSettingsActivity" />
+    </Preference>
+    <Preference
+        android:key="x11display"
+        android:title="@string/X11_display"
+        android:summary="@string/settings_for_X11_display"
+        app:iconSpaceReserved="false">
+        <intent
+            android:targetPackage="com.vectras.vm"
+            android:targetClass="com.vectras.vm.settings.X11DisplaySettingsActivity" />
+    </Preference>
+<!--    <Preference-->
+<!--        android:key="x11"-->
+<!--        android:fragment="com.vectras.vm.x11.LoriePreferences$LoriePreferenceFragment"-->
+<!--        android:title="@string/x11"-->
+<!--        android:summary="@string/x11_settings_description"-->
+<!--        app:iconSpaceReserved="false" />-->
+    <Preference
+        android:key="importandexport"
+        android:title="@string/import_and_export"
+        android:summary="@string/import_and_export_description"
+        app:iconSpaceReserved="false">
+        <intent
+            android:targetPackage="com.vectras.vm"
+            android:targetClass="com.vectras.vm.settings.ImportExportSettingsActivity" />
+    </Preference>
+</PreferenceScreen>

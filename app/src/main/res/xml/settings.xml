@@ -1,0 +1,70 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+<!--        android:title="@string/app_settings"-->
+<!--        app:icon="@drawable/round_settings_24">-->
+
+        <SwitchPreferenceCompat
+            android:id="@+id/switchPreferenceCompat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="true"
+            android:key="updateVersionPrompt"
+            android:summary="@string/check_on_startup"
+            android:title="@string/automatically_check_for_updates"
+            app:icon="@drawable/round_update_24" />
+
+        <SwitchPreferenceCompat
+            android:id="@+id/switchJoinBetaChannel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="false"
+            android:key="checkforupdatesfromthebetachannel"
+            android:summary="@string/you_will_receive_updates_to_experience_the_latest_features_early"
+            android:title="@string/join_the_beta_channel"
+            app:icon="@drawable/science_24px" />
+
+        <SwitchPreferenceCompat
+            android:id="@+id/copyfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="true"
+            android:key="copyFile"
+            android:summary="@string/copy_file_content"
+            android:title="@string/copy_file"
+            app:icon="@drawable/file_copy_24px" />
+
+        <SwitchPreferenceCompat
+            android:id="@+id/quickstart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="true"
+            android:key="quickStart"
+            android:summary="@string/quick_start_description"
+            android:title="@string/quick_start"
+            app:icon="@drawable/power_settings_new_24px" />
+
+        <ListPreference
+            android:key="language"
+            android:title="@string/language"
+            android:entries="@array/languageLabels"
+            android:entryValues="@array/languageValues"
+            android:defaultValue=""
+            android:summary="@string/tap_here_to_select_language"
+            app:isPreferenceVisible="true"
+            app:icon="@drawable/round_language_24" />
+
+        <Preference
+            android:key="checkforupdate"
+            android:title="@string/check_for_updates"
+            android:summary="@string/see_if_there_are_any_new_updates"
+            app:icon="@drawable/system_update_24px">
+            <intent
+                android:targetPackage="com.vectras.vm"
+                android:targetClass="com.vectras.vm.settings.UpdaterActivity" />
+        </Preference>
+
+    </PreferenceCategory>
+</PreferenceScreen>
