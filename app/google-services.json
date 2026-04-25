@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "977278130605",
+    "project_id": "virtual-pc-vm",
+    "storage_bucket": "virtual-pc-vm.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:977278130605:android:ed66ba1e9a2de8b5562924",
+        "android_client_info": {
+          "package_name": "com.vectras.vm"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0wOeehhCC2IUGRncmZSY-kn86d5TayXs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
